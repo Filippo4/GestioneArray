@@ -191,6 +191,31 @@ namespace Array
             }
             return risposta;
         }
+        public static void RiempiArray (int[] array)
+        {
+            Random random = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = random.Next();
+            }
+        }
+        public static int[] UnisciArray (int [] array1, int[]array2)
+        {
+            int[] array = new int[array1.Length +array2.Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = array1[i];
+            }
+            for (int i = array1.Length-1; i < array.Length;i++)
+            {
+                array[i] = array2[i-array1.Length];
+            }
+            return array;
+        }
+
+
+
+
     }
 }
 
